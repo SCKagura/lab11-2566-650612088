@@ -71,29 +71,29 @@ export default function RegisFormPage() {
   }
 
   const registerBtnOnClick = () => {
-    let fnameOk = true;
-    let lnameOk = true;
-    let planOk = true;
-    let genderOk = true;
+    let F_NameOk = true;
+    let L_NameOk = true;
+    let T_planOk = true;
+    let T_genderOk = true;
 
     if (fname === "") {
-      fnameOk = false;
+      F_NameOk = false;
       setFnameError(true);
     }
     if (lname === "") {
-      lnameOk = false;
+      L_NameOk = false;
       setLnameError(true);
     }
     if (plan === "") {
-      planOk = false;
+      T_planOk = false;
       setPlanError(true);
     }
     if (gender === null) {
-      genderOk = false;
+      T_genderOk = false;
       setGenderError(true);
     }
 
-    if (fnameOk && lnameOk && planOk && genderOk) {
+    if (F_NameOk && L_NameOk && T_planOk && T_genderOk) {
       alert(
         `Registration complete. Please pay money for ${computeTotalPayment().toLocaleString()} THB.`
       );
